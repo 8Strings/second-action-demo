@@ -1,5 +1,5 @@
 name: Test Project
-on: push
+on: [push, workflow_dispatch]
 jobs:
   # JOB FOR TESTS
   test:
