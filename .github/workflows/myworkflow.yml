@@ -1,0 +1,26 @@
+name: Test Project
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      # Download code from repository and install on runner
+      - name: Get code
+        # Use the action that has been added via the Gihub marketplace
+        uses: actions/checkout@v3
+      # Ensure that node js and dependencies are installed
+      - name: Set up node
+        uses: action/setup-node@v3
+        with:
+          node-version: 18
+      # Install dependencies
+      - name: Install dependencies
+        run: npm ci
+      # Run tests
+      - name: Run tests
+        run: npm test
+      
+
+
+      
+
