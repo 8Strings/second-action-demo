@@ -23,7 +23,7 @@ jobs:
   # JOB FOR DEPLOYMENT
   deploy:
     needs: test
-    runs-on: ubuntu-latests
+    runs-on: ubuntu-latest
     steps:
       # Download code from repository and install on runner
       - name: Get code
